@@ -1,0 +1,117 @@
+:root{
+
+ /* farver */
+ --red: #EA0F0F;
+ --black: #000000;
+ --white: #fff;   
+ --lightgrey: #EAE9E7;
+--darkgrey: #C7C5C3;
+
+/* font */
+--font-headline: "Zen Dots";
+--font-body: "inter";
+
+
+/* Teksstørrelser */
+--h1: 96px;
+--h2: 48px;
+--h3: 20px;
+--p: 16px;
+
+}
+
+
+@font-face {
+    font-family: "Zen Dots";
+    src: url(font/ZenDots-Regular.ttf);
+}
+@font-face {
+    font-family: "inter";
+    src: url(font/Inter_24pt-Regular.ttf);
+}
+
+
+h1{color: var(--red);
+font-family:var(--font-headline);
+font-size:var(--h1)}
+
+h2{color: var(--red);
+font-family: var(--font-headline);
+font-size: var(--h2);}
+
+p{color: var(--black);
+    font-family: var(--font-body);
+}
+
+body{
+    background-color: var(--darkgrey);
+}
+
+
+
+/* HEADER */
+header{display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: var(--lightgrey);
+padding: 1rem 2rem ;
+border: 1px solid var(--red)}
+
+.logo{
+    width: 80px;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.menu li a{
+    font-family: var(--font-body);
+    color: var(--red);
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.menu li a:hover{
+    transform:translateY(-3px);
+}
+
+/* FOOTER */
+footer{
+    background-color: var(--lightgrey);
+    color: var(--black);
+    border: 1px solid var(--red);
+    padding: 1rem;
+    text-align: left;
+}
+
+footer a{
+    color: var(--black);
+    text-decoration: underline
+}
+
+
+/* ROTATION-FIGURE */
+
+
+
+
+/* FORSIDE */
+.frontpage-image{
+    width: 100%;
+    max-width: 500px;
+}
+
+.frontpage-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--lightgrey);
+    border: 1px solid var(--red);
+}
+
+.frontpage-image-wrapper{
+    max-width: 500px;
+    width: 100%;
+
+}
