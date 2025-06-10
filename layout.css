@@ -135,7 +135,7 @@
 /* Mobil overskrift mindre */
 @media (max-width: 600px) {
   :root {
-    --h1: 65px;
+    --h1: 50px;
     --h2: 32px;
     --h3: 18px;
     --p: 16px;
