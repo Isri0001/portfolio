@@ -1,26 +1,143 @@
-@media (width >= 600px){
-.frontpage-wrapper{
+/*MEDIA QUERIES */
+
+/* FORSIDE til desktop */
+@media (min-width: 600px) {
+  .frontpage-wrapper {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-.headline-wrapper, .frontpage-image-wrapper{
+  }
+
+  .headline-wrapper,
+  .frontpage-image-wrapper {
     flex: 1;
     max-width: 50%;
-}
-.headline-wrapper {
-    text-align: right;               
-    padding-right: 2rem;             
   }
-  .frontpage-image-wrapper {
-    padding-left: 2rem;            
-  }
-   .headline-wrapper {
-    max-width: 55%;
+
+  .headline-wrapper {
+    text-align: right;
     padding-right: 1rem;
+    max-width: 55%;
   }
 
   .frontpage-image-wrapper {
+    padding-left: 2rem;
     max-width: 45%;
+  }
+
+
+/* OM MIG SIDE*/
+.portrait-wrapper {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.om-blok {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.about {
+  flex: 0 0 200px;
+  margin-right: 2rem;
+}
+
+.tekst-boks {
+  max-width: 500px;
+}
+
+/* TEMA SIDE */
+.tema2-row {
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.tema2-box {
+  flex: 1;
+  min-height: 350px;
+}
+  
+
+/* PROJEKTER SIDE*/
+.projekter-section .tema-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  place-items: center;           
+  margin: 0 auto;               
+  max-width: 900px;             
+  padding: 2rem 1rem;           
+}
+
+.projekter-section .tema-wrapper > div {
+  width: 250px;                
+}
+}
+
+
+
+
+/* knapperne i bunden på tema-siderne */
+@media (max-width: 600px) {
+  .projekt-navigation {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .projekt-navigation a {
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+/* BURGERMENU I MOBIL */
+.burger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--red);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 600px) {
+  .burger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--lightgrey);
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--red);
+    z-index: 999;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+}
+
+/* Mobil overskrift mindre */
+@media (max-width: 600px) {
+  :root {
+    --h1: 65px;
+    --h2: 32px;
+    --h3: 18px;
+    --p: 16px;
   }
 }
